@@ -1,0 +1,25 @@
+{
+  "name": "willIt",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "git@github.com:ideascomealive/willIt.git",
+  "author": "Jim McCoy, Michael Desantis",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^1.13.1"
+  }
+}
