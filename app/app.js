@@ -1,3 +1,4 @@
-const React = require("react");
+const React = require('react');
 const ReactDOM = require("react-dom");
-ReactDOM.render(<p>Hello World!</p>, document.getElementById("app"));
+const MasterComponent = require("./components/MasterComponent.js");
+ReactDOM.render(<MasterComponent/>, document.getElementById("app"));
