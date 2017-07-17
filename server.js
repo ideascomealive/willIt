@@ -15,6 +15,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 const apiRoutes = require('./app/controllers/apiRoutes.js');
 app.use('/api', apiRoutes);
 
+//need default route for delegation to react-router
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+
 // Listen on port.
 app.listen(process.env.PORT || 3000,function(){
   process.env.PORT == undefined? console.log("App listening on PORT 3000"):console.log("App listening on PORT" + process.env.PORT);
