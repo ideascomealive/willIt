@@ -6,7 +6,7 @@ const app = express();
 
 //BodyParser setup
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Serve static assets
 app.use(express.static(path.join(__dirname, 'public')));

@@ -21,6 +21,11 @@ router.get('/',(req,res) => {
     res.send("api");
 });
 
+router.post('/login',(req,res)=>{
+    console.log(req.body);
+    res.send("login credentials received");
+});
+
 router.post('/newUser',(req,res) => {
     let placeholderUser = {
         "firstName":"John",
@@ -33,6 +38,7 @@ router.post('/newUser',(req,res) => {
         }
     }
 
+    //New user input requires a vaidation check to ensure we do not save junk data, or save over an existing record. If the e-mail or username is already taken, we will need to inform user.
     let newUser = new User(placeholderUser);
 
     newUser.save(function(err, doc) {
