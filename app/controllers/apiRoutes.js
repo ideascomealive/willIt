@@ -23,6 +23,9 @@ router.get('/',(req,res) => {
 
 router.post('/login',(req,res)=>{
     console.log(req.body);
+    //Deal with Login credentials via passport
+    //Send Auth token if valid login
+    //Send error message to user if invalid.
     res.send("login credentials received");
 });
 
