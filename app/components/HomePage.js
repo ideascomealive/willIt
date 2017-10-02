@@ -1,9 +1,18 @@
 const React = require("react");
 const {Component} = React;
+const LoggedIn = require("./LoggedIn.js");
 
 class HomePage extends Component{
+    constructor(props) {
+    super(props); 
+  }
     render(){
-        return <p>Home Page</p>;
+        return(
+          <div> 
+            <p>Home Page</p>
+            <LoggedIn loggedIn={false}/>
+          </div>
+        )
     }
 };
 
